@@ -12,7 +12,8 @@
     ".": {
       "import": "./dist/components.js",
       "require": "./dist/components.umd.cjs"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",

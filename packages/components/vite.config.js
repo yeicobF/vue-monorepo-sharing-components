@@ -13,7 +13,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, "lib/main.js"),
+      entry: resolve(__dirname, "src/index.js"),
       name: "Components",
       // the proper extensions will be added
       fileName: "components",
@@ -23,6 +23,13 @@ export default defineConfig({
       // into your library
       external: ["vue"],
       output: {
+        /* 
+        Entry module "src/index.js" is using named and default exports together.
+        Consumers of your bundle will have to use `Components["default"]` to
+        access the default export, which may not be what you want. Use
+        `output.exports: "named"` to disable this warning 
+        */
+        exports: "named",
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
