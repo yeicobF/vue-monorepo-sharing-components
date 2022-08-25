@@ -2,7 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from "./components/HelloWorld.vue";
-import SharedComponent from "@aia/components/SharedComponent.vue";
+import { SharedHelloWorld, SharedComponent } from "@aia/components";
 </script>
 
 <template>
@@ -10,6 +10,7 @@ import SharedComponent from "@aia/components/SharedComponent.vue";
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
       <SharedComponent parentComponentName="App 2" />
+      <SharedHelloWorld msg="Shared Hello World" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
